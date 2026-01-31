@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://bumncmplyitcn"
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_left={

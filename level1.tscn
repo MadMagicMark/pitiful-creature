@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://vfkslypelumr" path="res://assets/level01/BackgroundDunesFurther.png" id="4_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://b86j854tmqov5" path="res://assets/level01/Mask_White.png" id="9_5j5gb"]
 [ext_resource type="PackedScene" uid="uid://bn4mwq4t7rnim" path="res://assets/pitifulCreature/creature.tscn" id="9_usj0q"]
+[ext_resource type="Script" uid="uid://due5c1b2f8uk2" path="res://white_mask.gd" id="10_5j5gb"]
 
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
 position = Vector2(3, 0)
@@ -61,7 +62,7 @@ polygon = PackedVector2Array(27.25, 54.25, 84.75, 66.75, 146.25, 71.5, 170.75, 6
 
 [node name="Buildings" parent="BuildingNode" unique_id=1666850886 instance=ExtResource("3_5j5gb")]
 
-[node name="Player" parent="." unique_id=737628181 instance=ExtResource("9_usj0q")]
+[node name="Player" parent="." unique_id=737628181 groups=["player"] instance=ExtResource("9_usj0q")]
 position = Vector2(614, 344)
 
 [node name="White Mask" type="Node2D" parent="." unique_id=1525597463]
@@ -71,7 +72,10 @@ scale = Vector2(4, 4)
 [node name="MaskWhite" type="Sprite2D" parent="White Mask" unique_id=942545174]
 texture = ExtResource("9_5j5gb")
 
-[node name="WhiteMaskCollision" type="CollisionPolygon2D" parent="White Mask/MaskWhite" unique_id=1466157091]
-position = Vector2(69.69924, 20.086107)
+[node name="Area2D" type="Area2D" parent="White Mask/MaskWhite" unique_id=1931059837]
+script = ExtResource("10_5j5gb")
+
+[node name="WhiteMaskCollision" type="CollisionPolygon2D" parent="White Mask/MaskWhite/Area2D" unique_id=1466157091]
+position = Vector2(69.69925, 20.086107)
 scale = Vector2(0.61651146, 0.6404473)
 polygon = PackedVector2Array(178, 44, 178, 46.199997, 175.20001, 49, 172.1, 49, 176, 59.399994, 176, 61.800003, 179.20001, 65, 186.20001, 65, 190.1, 58, 192, 58, 192, 50, 187, 46, 187, 44)
