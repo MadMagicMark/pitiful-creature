@@ -5,7 +5,7 @@ extends Node2D
 @export var actual_answers: Array[int] = [
 	1, 7, 11, 4, 
 ]
-@export var blue_mask_mode:bool
+var blue_mask_mode: bool
 @export var highlight_anim_time = 0.5
 var user_answers: Array[int] = []
 
@@ -40,6 +40,7 @@ var glow_textures: Array[Texture2D] = [
 ]
 
 func _ready() -> void:
+	blue_mask_mode = GameManager.current_mask_name == GameManager.MASK_3
 	var idx: int = 0
 	for child_button in get_children():
 		child_button.input_event.connect(_on_area_2d_input_event.bind(idx))
