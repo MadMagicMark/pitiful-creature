@@ -17,30 +17,31 @@ hud = NodePath("Hud")
 
 [node name="Hud" parent="." unique_id=1277068767 instance=ExtResource("1_v38iq")]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=579429006]
-position = Vector2(0, -50)
+[node name="Background" type="Node2D" parent="." unique_id=579429006]
+visible = false
 
-[node name="Far" type="Parallax2D" parent="Node2D" unique_id=660153268]
+[node name="Far" type="Parallax2D" parent="Background" unique_id=660153268]
 scroll_scale = Vector2(0, 1)
 scroll_offset = Vector2(1000, 0)
 
-[node name="Sky" type="Sprite2D" parent="Node2D/Far" unique_id=1047189512]
+[node name="Sky" type="Sprite2D" parent="Background/Far" unique_id=1047189512]
+position = Vector2(0, 29)
 scale = Vector2(4, 4)
 texture = ExtResource("3_i2041")
 
-[node name="Far Dunes" type="Sprite2D" parent="Node2D/Far" unique_id=1351675484]
+[node name="Far Dunes" type="Sprite2D" parent="Background/Far" unique_id=1351675484]
 scale = Vector2(4, 4)
 texture = ExtResource("4_xy4tn")
 
-[node name="Mid" type="Parallax2D" parent="Node2D" unique_id=236881805]
+[node name="Mid" type="Parallax2D" parent="Background" unique_id=236881805]
 scroll_scale = Vector2(0.5, 1)
 scroll_offset = Vector2(1000, 0)
 
-[node name="Mid Dunes" type="Sprite2D" parent="Node2D/Mid" unique_id=1511136717]
+[node name="Mid Dunes" type="Sprite2D" parent="Background/Mid" unique_id=1511136717]
 scale = Vector2(4, 4)
 texture = ExtResource("2_crycw")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/Mid" unique_id=1569497853]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Mid" unique_id=1569497853]
 motion_scale = Vector2(0.5, 0.5)
 
 [node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="." unique_id=1500589098]
@@ -60,3 +61,10 @@ position = Vector2(0, -50)
 
 [node name="Player" parent="." unique_id=737628181 instance=ExtResource("9_usj0q")]
 position = Vector2(1007, -17.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1320106763]
+position = Vector2(1007, -17.5)
+scale = Vector2(4, 4)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=789952604]
+polygon = PackedVector2Array(26, 57.875, 84.5, 70.625, 152.25, 78.125, 173.25, 65.375, 189.25, 66.125, 219.75, 44.625, 247.25, 45.125, 247.75, 102.625, -252, 104.875, -252.25, 79.875, -190.75, 62.125, -171, 66.375, -114.25, 82.875, -67.75, 83.875, -7.25, 65.875)

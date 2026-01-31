@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn4mwq4t7rnim"]
 
+[ext_resource type="Script" uid="uid://33u84wkmuljv" path="res://assets/pitifulCreature/creature.gd" id="1_h7l1l"]
 [ext_resource type="Texture2D" uid="uid://dgpuc08xkyp01" path="res://assets/pitifulCreature/Stage1_walk.png" id="1_qtwcw"]
-[ext_resource type="Script" uid="uid://doxajvogep7n6" path="res://main_player.gd" id="2_h7l1l"]
 
 [sub_resource type="Animation" id="Animation_beq0j"]
 length = 0.001
@@ -45,15 +45,20 @@ _data = {
 &"player_walk": SubResource("Animation_nauge")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=737628181]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtwcw"]
+size = Vector2(24.25, 12.5)
+
+[node name="Player" type="CharacterBody2D" unique_id=737628181 node_paths=PackedStringArray("sprite", "animationPlayer")]
 scale = Vector2(4, 4)
+script = ExtResource("1_h7l1l")
+sprite = NodePath("PlayerSprite")
+animationPlayer = NodePath("PlayerSprite/AnimationPlayer")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=811666763]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_qtwcw")
 offset = Vector2(4, -30)
 hframes = 2
-script = ExtResource("2_h7l1l")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerSprite" unique_id=170294058]
 limit_left = 0
@@ -64,3 +69,7 @@ limit_smoothed = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=609113224]
 libraries/ = SubResource("AnimationLibrary_ycv2e")
 autoplay = &"player_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832895403]
+position = Vector2(1.375, -6.25)
+shape = SubResource("RectangleShape2D_qtwcw")
