@@ -6,4 +6,5 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		print("Item collected!")
+		GameManager.acquire_mask(GameManager.MASK_DAPPER)
 		# get_parent().queue_free()  # Removes the parent Sprite2D

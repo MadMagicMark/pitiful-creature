@@ -2,7 +2,13 @@ extends CanvasLayer
 
 @export var mask_container: Control;
 
+func _ready() -> void:
+	GameManager.inventory_changed.connect(_on_inventory_changed)
 
+func _on_inventory_changed(item_name: String) -> void:
+	# If it was a mask, update the mask UI
+	update_mask_ui()
+	
 func update_mask_ui():
 	show_collected_masks()
 	show_selected_mask()
