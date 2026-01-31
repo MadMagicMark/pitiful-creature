@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bn4mwq4t7rnim" path="res://assets/pitifulCreature/creature.tscn" id="9_usj0q"]
 
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
+position = Vector2(3, 0)
 script = ExtResource("1_v8kj3")
 hud = NodePath("Hud")
 
