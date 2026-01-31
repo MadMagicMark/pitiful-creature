@@ -16,40 +16,42 @@ hud = NodePath("Hud")
 
 [node name="Hud" parent="." unique_id=1277068767 instance=ExtResource("1_v38iq")]
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=236881805]
+[node name="Node2D" type="Node2D" parent="." unique_id=579429006]
 
-[node name="Sky" type="Sprite2D" parent="Parallax2D" unique_id=1047189512]
-position = Vector2(1007, -18)
+[node name="Far" type="Parallax2D" parent="Node2D" unique_id=660153268]
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(1000, 0)
+
+[node name="Sky" type="Sprite2D" parent="Node2D/Far" unique_id=1047189512]
 scale = Vector2(4, 4)
 texture = ExtResource("3_i2041")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D" unique_id=548250315]
-motion_scale = Vector2(0, 0)
-
-[node name="Far Dunes" type="Sprite2D" parent="Parallax2D/ParallaxLayer2" unique_id=1351675484]
-position = Vector2(1007, -18)
+[node name="Far Dunes" type="Sprite2D" parent="Node2D/Far" unique_id=1351675484]
 scale = Vector2(4, 4)
 texture = ExtResource("4_xy4tn")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D" unique_id=1569497853]
-motion_scale = Vector2(0.5, 0.5)
+[node name="Mid" type="Parallax2D" parent="Node2D" unique_id=236881805]
+scroll_scale = Vector2(0.5, 1)
+scroll_offset = Vector2(1000, 0)
 
-[node name="Mid Dunes" type="Sprite2D" parent="Parallax2D/ParallaxLayer" unique_id=1511136717]
-position = Vector2(1007, -17.5)
+[node name="Mid Dunes" type="Sprite2D" parent="Node2D/Mid" unique_id=1511136717]
 scale = Vector2(4, 4)
 texture = ExtResource("2_crycw")
 
-[node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="Parallax2D/ParallaxLayer" unique_id=1500589098]
-position = Vector2(1008, -12)
-scale = Vector2(4, 4)
-texture = ExtResource("6_1idop")
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/Mid" unique_id=1569497853]
+motion_scale = Vector2(0.5, 0.5)
 
 [node name="BuildingNode" type="Node2D" parent="." unique_id=1840637102]
 
 [node name="Buildings" parent="BuildingNode" unique_id=1666850886 instance=ExtResource("3_5j5gb")]
 
+[node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="." unique_id=1500589098]
+position = Vector2(1000, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("6_1idop")
+
 [node name="Dunes" type="Sprite2D" parent="." unique_id=1320982546]
-position = Vector2(1010, -16)
+position = Vector2(1000, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("1_ootpb")
 
