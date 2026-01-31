@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://hpv81bfxu0hq"]
 
 [ext_resource type="Texture2D" uid="uid://dyec3ekn6ql3k" path="res://icon.svg" id="1_dopym"]
-[ext_resource type="Script" path="res://main_player.gd" id="1_jwv3a"]
+[ext_resource type="Script" uid="uid://doxajvogep7n6" path="res://main_player.gd" id="1_jwv3a"]
 [ext_resource type="Texture2D" uid="uid://16xe0buv1a27" path="res://assets/level01/Ground.png" id="1_ootpb"]
 [ext_resource type="Script" uid="uid://byjc2tlor8rnn" path="res://level_1.gd" id="1_v8kj3"]
 [ext_resource type="PackedScene" uid="uid://by716xgegvvog" path="res://assets/hud/hud.tscn" id="1_v38iq"]
 [ext_resource type="Texture2D" uid="uid://dceeq1m4crjpc" path="res://assets/level01/BackgroundDunes.png" id="2_crycw"]
 [ext_resource type="Texture2D" uid="uid://la5q0mujgpe2" path="res://assets/level01/Sky.png" id="3_i2041"]
+[ext_resource type="Texture2D" uid="uid://vfkslypelumr" path="res://assets/level01/BackgroundDunesFurther.png" id="4_xy4tn"]
 
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_v8kj3")
@@ -14,27 +15,32 @@ hud = NodePath("Hud")
 
 [node name="Hud" parent="." unique_id=1277068767 instance=ExtResource("1_v38iq")]
 
+[node name="Sky" type="Sprite2D" parent="." unique_id=1047189512]
+position = Vector2(1007, -18)
+scale = Vector2(4, 4)
+texture = ExtResource("3_i2041")
+
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=236881805]
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D" unique_id=548250315]
 motion_scale = Vector2(0, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2" unique_id=1351675484]
-position = Vector2(867, 192)
-scale = Vector2(3.46, 1.95)
-texture = ExtResource("3_i2041")
+[node name="BGDunes2" type="Sprite2D" parent="Parallax2D/ParallaxLayer2" unique_id=1351675484]
+position = Vector2(1007, -18)
+scale = Vector2(4, 4)
+texture = ExtResource("4_xy4tn")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D" unique_id=1569497853]
 motion_scale = Vector2(0.5, 0.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer" unique_id=1511136717]
-position = Vector2(867, 192.5)
-scale = Vector2(3.46, 1.915)
+[node name="BGDunes" type="Sprite2D" parent="Parallax2D/ParallaxLayer" unique_id=1511136717]
+position = Vector2(1007, -17.5)
+scale = Vector2(4, 4)
 texture = ExtResource("2_crycw")
 
 [node name="Dunes" type="Sprite2D" parent="." unique_id=1320982546]
-position = Vector2(870, 194)
-scale = Vector2(3.4520001, 1.93)
+position = Vector2(1010, -16)
+scale = Vector2(4, 4)
 texture = ExtResource("1_ootpb")
 
 [node name="Player" type="Sprite2D" parent="." unique_id=436859836]
