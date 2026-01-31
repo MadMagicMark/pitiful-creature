@@ -67,7 +67,6 @@ func reset_button_highlight(idx: int):
 	btn.texture = plain_textures[idx]
 
 func _on_button_pressed(idx: int) -> void:
-	print("Click")
 	if idx == 0:
 		_on_back()
 	else:
