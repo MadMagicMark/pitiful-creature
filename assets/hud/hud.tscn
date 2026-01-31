@@ -38,11 +38,12 @@ texture_filter = 1
 layout_mode = 2
 
 [node name="MaskNone" type="TextureRect" parent="MarginContainer/HBoxMaskContainer" unique_id=2023343834]
+visible = false
 layout_mode = 2
 texture = ExtResource("3_ndvix")
 expand_mode = 2
 stretch_mode = 4
-metadata/mask_idx = 0
+metadata/mask_name = "MASK-1"
 
 [node name="MaskWhite" type="TextureRect" parent="MarginContainer/HBoxMaskContainer" unique_id=767984273]
 visible = false
@@ -50,7 +51,7 @@ layout_mode = 2
 texture = ExtResource("4_ndvix")
 expand_mode = 2
 stretch_mode = 4
-metadata/mask_idx = 1
+metadata/mask_name = "MASK-2"
 
 [node name="MaskBlue" type="TextureRect" parent="MarginContainer/HBoxMaskContainer" unique_id=1496324078]
 visible = false
@@ -58,7 +59,7 @@ layout_mode = 2
 texture = ExtResource("5_g1w06")
 expand_mode = 2
 stretch_mode = 4
-metadata/mask_idx = 2
+metadata/mask_name = "MASK-3"
 
 [node name="MaskRed" type="TextureRect" parent="MarginContainer/HBoxMaskContainer" unique_id=1382256951]
 visible = false
@@ -66,4 +67,4 @@ layout_mode = 2
 texture = ExtResource("6_g1w06")
 expand_mode = 2
 stretch_mode = 4
-metadata/mask_idx = 3
+metadata/mask_name = "MASK-4"
