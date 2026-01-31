@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://ybrndvqphxio" path="res://assets/level01/Mask_BlueStand.png" id="9_s1vhq"]
 [ext_resource type="Texture2D" uid="uid://lshddyb1oy8u" path="res://assets/level01/Mask_Blue.png" id="10_hhf17"]
 [ext_resource type="Texture2D" uid="uid://dt4nyqg5t6h0h" path="res://assets/level01/Mask_WhiteStand.png" id="11_qbmpf"]
-[ext_resource type="Texture2D" uid="uid://b86j854tmqov5" path="res://assets/level01/Mask_White.png" id="12_qoyhb"]
 
 [node name="Buildings" type="Node2D" unique_id=1666850886]
 
@@ -83,17 +82,7 @@ position = Vector2(1008, -19)
 scale = Vector2(4, 4)
 texture = ExtResource("11_qbmpf")
 
-[node name="MaskWhite" type="Sprite2D" parent="." unique_id=204660399]
-position = Vector2(1008, -19)
-scale = Vector2(4, 4)
-texture = ExtResource("12_qoyhb")
-
 [node name="BlueMaskCollision" type="CollisionPolygon2D" parent="." unique_id=975302351]
 position = Vector2(1008, -19)
 scale = Vector2(4, 4)
 polygon = PackedVector2Array(23, -3, 23, -0.80000305, 20.200012, 2, 17.100006, 2, 21, 12.400002, 21, 14.800003, 24.200012, 18, 31.200012, 18, 35.100006, 11, 37, 11, 37, 3, 32, -1, 32, -3)
-
-[node name="WhiteMaskCollision" type="CollisionPolygon2D" parent="." unique_id=2064844248]
-position = Vector2(1008, -19)
-scale = Vector2(4, 4)
-polygon = PackedVector2Array(178, 44, 178, 46.199997, 175.20001, 49, 172.1, 49, 176, 59.399994, 176, 61.800003, 179.20001, 65, 186.20001, 65, 190.1, 58, 192, 58, 192, 50, 187, 46, 187, 44)
