@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bx5ix62v3ictn" path="res://buildings.tscn" id="3_5j5gb"]
 [ext_resource type="Texture2D" uid="uid://la5q0mujgpe2" path="res://assets/level01/Sky.png" id="3_i2041"]
 [ext_resource type="Texture2D" uid="uid://vfkslypelumr" path="res://assets/level01/BackgroundDunesFurther.png" id="4_xy4tn"]
-[ext_resource type="Texture2D" uid="uid://g5tl8wy6l156" path="res://assets/level01/Ruins_BehindDunesPassthrough.png" id="6_1idop"]
 [ext_resource type="PackedScene" uid="uid://bn4mwq4t7rnim" path="res://assets/pitifulCreature/creature.tscn" id="9_usj0q"]
 
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
@@ -42,11 +41,6 @@ texture = ExtResource("2_crycw")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Mid" unique_id=1569497853]
 motion_scale = Vector2(0.5, 0.5)
-
-[node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="." unique_id=1500589098]
-position = Vector2(1000, 0)
-scale = Vector2(4, 4)
-texture = ExtResource("6_1idop")
 
 [node name="Dunes" type="Sprite2D" parent="." unique_id=1320982546]
 position = Vector2(1000, 0)

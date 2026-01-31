@@ -62,7 +62,7 @@ hframes = 4
 [node name="Camera2D" type="Camera2D" parent="PlayerSprite" unique_id=170294058]
 limit_left = 0
 limit_right = 1900
-limit_bottom = 370
+limit_bottom = 400
 limit_smoothed = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=609113224]
