@@ -72,9 +72,17 @@ func _on_button_pressed(idx: int) -> void:
 	else:
 		user_answers.append(idx)
 		if user_answers == actual_answers:
-			_on_solve()
+			# Highlight most recent correct answer
+			var btn = get_sprite_for_area2d(idx)
+			btn.texture = glow_textures[idx]
+			var tween = get_tree().create_tween()
+			tween.tween_interval(highlight_anim_time)
+			tween.connect("finished", _on_solve)
 		else:
 			if correct_so_far():
+				# Highlight most recent correct answer
+				var btn = get_sprite_for_area2d(idx)
+				btn.texture = glow_textures[idx]
 				var next_idx = len(user_answers)
 				highlight_button_animation(actual_answers[next_idx])
 			else:
