@@ -8,6 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://dceeq1m4crjpc" path="res://assets/level01/BackgroundDunes.png" id="2_crycw"]
 [ext_resource type="Texture2D" uid="uid://la5q0mujgpe2" path="res://assets/level01/Sky.png" id="3_i2041"]
 [ext_resource type="Texture2D" uid="uid://vfkslypelumr" path="res://assets/level01/BackgroundDunesFurther.png" id="4_xy4tn"]
+[ext_resource type="Texture2D" uid="uid://g5tl8wy6l156" path="res://assets/level01/Ruins_BehindDunesPassthrough.png" id="6_1idop"]
+[ext_resource type="Texture2D" uid="uid://c31kerpdym3du" path="res://assets/level01/Portal.png" id="10_beq0j"]
+[ext_resource type="Texture2D" uid="uid://boewrmpihqp6c" path="res://assets/level01/PortalGlow1.png" id="11_nauge"]
+[ext_resource type="Texture2D" uid="uid://coy7v8k7bj1ip" path="res://assets/level01/PortalGlow2.png" id="12_ycv2e"]
+[ext_resource type="Texture2D" uid="uid://b2lu7evjp1pn7" path="res://assets/level01/Ruins_FrontPassthrough.png" id="13_c5gc3"]
+[ext_resource type="Texture2D" uid="uid://06psexvjnp8k" path="res://assets/level01/Ruins_Top_BlocksCharacter.png" id="14_6e4cv"]
+[ext_resource type="Texture2D" uid="uid://dom5loo56jo1k" path="res://assets/level01/ShrineBackground.png" id="15_uuy0h"]
+[ext_resource type="Texture2D" uid="uid://cajvffsciorxi" path="res://assets/level01/ShrineForeground.png" id="16_52iny"]
+[ext_resource type="Texture2D" uid="uid://dqyg2p52nrxng" path="res://assets/level01/Temples.png" id="17_nxqqj"]
 
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_v8kj3")
@@ -38,6 +47,11 @@ position = Vector2(1007, -17.5)
 scale = Vector2(4, 4)
 texture = ExtResource("2_crycw")
 
+[node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="Parallax2D/ParallaxLayer" unique_id=1500589098]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("6_1idop")
+
 [node name="Dunes" type="Sprite2D" parent="." unique_id=1320982546]
 position = Vector2(1010, -16)
 scale = Vector2(4, 4)
@@ -50,3 +64,43 @@ script = ExtResource("1_jwv3a")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1931360144]
 position = Vector2(428, -227)
+
+[node name="Portal" type="Sprite2D" parent="." unique_id=63192489]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("10_beq0j")
+
+[node name="PortalGlow1" type="Sprite2D" parent="." unique_id=65650570]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("11_nauge")
+
+[node name="PortalGlow2" type="Sprite2D" parent="." unique_id=806439411]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("12_ycv2e")
+
+[node name="RuinsFrontPassthrough" type="Sprite2D" parent="." unique_id=1689272075]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("13_c5gc3")
+
+[node name="RuinsTopBlocksCharacter" type="Sprite2D" parent="." unique_id=2017579388]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("14_6e4cv")
+
+[node name="ShrineBackground" type="Sprite2D" parent="." unique_id=1069137809]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("15_uuy0h")
+
+[node name="ShrineForeground" type="Sprite2D" parent="." unique_id=671978395]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("16_52iny")
+
+[node name="Temples" type="Sprite2D" parent="." unique_id=749761298]
+position = Vector2(1008, -12)
+scale = Vector2(4, 4)
+texture = ExtResource("17_nxqqj")
