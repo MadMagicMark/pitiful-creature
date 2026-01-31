@@ -45,7 +45,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtwcw"]
-size = Vector2(24.25, 12.5)
+size = Vector2(18.25, 11.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=737628181 node_paths=PackedStringArray("sprite", "animationPlayer")]
 scale = Vector2(4, 4)
@@ -70,5 +70,5 @@ libraries/ = SubResource("AnimationLibrary_ycv2e")
 autoplay = &"player_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832895403]
-position = Vector2(1.375, -6.25)
+position = Vector2(-1.625, -14.5)
 shape = SubResource("RectangleShape2D_qtwcw")

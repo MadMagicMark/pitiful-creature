@@ -42,21 +42,22 @@ texture = ExtResource("2_crycw")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Mid" unique_id=1569497853]
 motion_scale = Vector2(0.5, 0.5)
 
-[node name="Dunes" type="Sprite2D" parent="." unique_id=1320982546]
-position = Vector2(1000, 0)
+[node name="Node2D" type="Node2D" parent="." unique_id=709861764]
+position = Vector2(1007, 0)
 scale = Vector2(4, 4)
+
+[node name="Dunes" type="Sprite2D" parent="Node2D" unique_id=1320982546]
+position = Vector2(-1.75, 0)
 texture = ExtResource("1_ootpb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1320106763]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D" unique_id=789952604]
+polygon = PackedVector2Array(27.25, 54.25, 84.75, 66.75, 146.25, 71.5, 170.75, 62.5, 192, 63, 194, 49.25, 214.75, 40.25, 247.75, 40, 248.5, 107, -252.5, 107.75, -252, 73.75, -197.25, 58.5, -181.75, 58.25, -112.75, 78.5, -68.75, 77.25, 9.25, 54.5)
 
 [node name="BuildingNode" type="Node2D" parent="." unique_id=1840637102]
 
 [node name="Buildings" parent="BuildingNode" unique_id=1666850886 instance=ExtResource("3_5j5gb")]
 
 [node name="Player" parent="." unique_id=737628181 instance=ExtResource("9_usj0q")]
-position = Vector2(1007, -17.5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1320106763]
-position = Vector2(1007, -17.5)
-scale = Vector2(4, 4)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=789952604]
-polygon = PackedVector2Array(26, 57.875, 84.5, 70.625, 152.25, 78.125, 173.25, 65.375, 192, 65.375, 196, 54.125, 219.75, 44.625, 247.25, 45.125, 247.5, 111.375, -251.25, 111.625, -252.25, 79.875, -190.75, 62.125, -171, 66.375, -114.25, 82.875, -67.75, 83.875, -7.25, 65.875)
+position = Vector2(614, 344)
