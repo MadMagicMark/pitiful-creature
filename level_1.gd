@@ -3,13 +3,16 @@ extends Node2D
 @export var hud: CanvasLayer;
 
 func _ready() -> void:
-	print(hud.selected_mask_idx)
+	hud.select_mask(0)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		var keycode = event.keycode
 		if keycode >= KEY_1 and keycode <= KEY_9:
-			hud.selected_mask_idx = keycode - KEY_1
-		if keycode == KEY_P:
-			hud.collected_mask_cnt += 1   
-   
+			hud.select_mask(keycode - KEY_1)
+		# The following code is just to try out hud changes
+		if keycode == KEY_J:
+			hud.collect_mask(1)
+		if keycode == KEY_K:
+			hud.collect_mask(2)            
+		# The following code is just to try out hud changes     
