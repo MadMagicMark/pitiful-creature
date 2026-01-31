@@ -18,6 +18,9 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_qtwcw"]
+resource_name = "player_idle"
+
 [sub_resource type="Animation" id="Animation_nauge"]
 resource_name = "player_walk"
 length = 0.2
@@ -38,6 +41,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ycv2e"]
 _data = {
 &"RESET": SubResource("Animation_beq0j"),
+&"player_idle": SubResource("Animation_qtwcw"),
 &"player_walk": SubResource("Animation_nauge")
 }
 
@@ -45,14 +49,18 @@ _data = {
 scale = Vector2(4, 4)
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=811666763]
-position = Vector2(-214.5, 75.875)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_qtwcw")
+offset = Vector2(4, -30)
 hframes = 2
 script = ExtResource("2_h7l1l")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerSprite" unique_id=170294058]
-position = Vector2(229, -120)
+limit_left = 0
+limit_right = 1900
+limit_bottom = 370
+limit_smoothed = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=609113224]
 libraries/ = SubResource("AnimationLibrary_ycv2e")
+autoplay = &"player_idle"

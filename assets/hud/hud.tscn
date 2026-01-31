@@ -12,6 +12,7 @@ script = ExtResource("1_ndvix")
 mask_container = NodePath("MarginContainer/HBoxMaskContainer")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1670712684]
+texture_filter = 1
 offset_right = 1142.0
 offset_bottom = 655.0
 texture = ExtResource("5_41ool")
@@ -33,6 +34,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="HBoxMaskContainer" type="HBoxContainer" parent="MarginContainer" unique_id=289732741]
+texture_filter = 1
 layout_mode = 2
 
 [node name="MaskNone" type="TextureRect" parent="MarginContainer/HBoxMaskContainer" unique_id=2023343834]
