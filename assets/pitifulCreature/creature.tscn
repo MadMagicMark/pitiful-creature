@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgpuc08xkyp01" path="res://assets/pitifulCreature/Stage1_walk.png" id="1_qtwcw"]
 [ext_resource type="Texture2D" uid="uid://c1rpdne5cvqii" path="res://assets/pitifulCreature/Stage2_white.png" id="3_h7l1l"]
 [ext_resource type="Texture2D" uid="uid://rv8mhp8vcnvc" path="res://assets/pitifulCreature/Stage3_blue.png" id="4_xfp1t"]
+[ext_resource type="Texture2D" uid="uid://x8u0ic1lpwnm" path="res://assets/pitifulCreature/Stage4_green.png" id="5_m4u8d"]
 
 [sub_resource type="Animation" id="Animation_beq0j"]
 length = 0.001
@@ -106,6 +107,7 @@ scale = Vector2(4, 4)
 script = ExtResource("1_h7l1l")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=811666763]
+visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_qtwcw")
 offset = Vector2(4, -30)
@@ -122,6 +124,7 @@ libraries/ = SubResource("AnimationLibrary_ycv2e")
 autoplay = &"player_idle"
 
 [node name="PlayerSprite2" type="Sprite2D" parent="." unique_id=468632623]
+visible = false
 position = Vector2(0, -23.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_h7l1l")
@@ -132,6 +135,7 @@ libraries/ = SubResource("AnimationLibrary_1sajw")
 autoplay = &"idle"
 
 [node name="PlayerSprite3" type="Sprite2D" parent="." unique_id=1900962532]
+visible = false
 position = Vector2(2.75, -17.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xfp1t")
@@ -141,14 +145,31 @@ hframes = 8
 libraries/ = SubResource("AnimationLibrary_1sajw")
 autoplay = &"idle"
 
+[node name="PlayerSprite4" type="Sprite2D" parent="." unique_id=406243250]
+position = Vector2(2.75, -17.75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_m4u8d")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite4" unique_id=804610458]
+libraries/ = SubResource("AnimationLibrary_1sajw")
+autoplay = &"idle"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832895403]
+visible = false
 position = Vector2(-1.375, -14.75)
 shape = SubResource("RectangleShape2D_qtwcw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1577777277]
+visible = false
 position = Vector2(0.375, -22.75)
 shape = SubResource("RectangleShape2D_xfp1t")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=188281309]
+visible = false
+position = Vector2(1.75, -17.25)
+shape = SubResource("RectangleShape2D_m4u8d")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=414909235]
 position = Vector2(1.75, -17.25)
 shape = SubResource("RectangleShape2D_m4u8d")

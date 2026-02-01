@@ -6,9 +6,12 @@ var sprite2:Sprite2D
 var animationPlayer2: AnimationPlayer
 var sprite3:Sprite2D
 var animationPlayer3: AnimationPlayer
+var sprite4:Sprite2D
+var animationPlayer4: AnimationPlayer
 var collisionShape: CollisionShape2D
 var collisionShape2: CollisionShape2D
 var collisionShape3: CollisionShape2D
+var collisionShape4: CollisionShape2D
 
 
 func _ready() -> void:
@@ -17,12 +20,15 @@ func _ready() -> void:
 	sprite = $PlayerSprite
 	sprite2 = $PlayerSprite2
 	sprite3 = $PlayerSprite3
+	sprite4 = $PlayerSprite4
 	animationPlayer = $PlayerSprite/AnimationPlayer
 	animationPlayer2 = $PlayerSprite2/AnimationPlayer
 	animationPlayer3 = $PlayerSprite3/AnimationPlayer
+	animationPlayer4 = $PlayerSprite4/AnimationPlayer
 	collisionShape = $CollisionShape2D
 	collisionShape2 = $CollisionShape2D2
 	collisionShape3 = $CollisionShape2D3
+	collisionShape4 = $CollisionShape2D4
 
 	animationPlayer.play("player_idle")
 	animationPlayer2.play("idle")
@@ -41,6 +47,8 @@ func show_visible_player_version():
 	collisionShape2.disabled = GameManager.current_mask_name != GameManager.MASK_DAPPER
 	sprite3.visible = GameManager.current_mask_name == GameManager.MASK_2
 	collisionShape3.disabled = GameManager.current_mask_name != GameManager.MASK_2
+	sprite4.visible = GameManager.current_mask_name == GameManager.MASK_3
+	collisionShape4.disabled = GameManager.current_mask_name != GameManager.MASK_3	
 
 func update_collision_shape():
 	pass
