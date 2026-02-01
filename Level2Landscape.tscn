@@ -8,13 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://l4xbonxni5y3" path="res://assets/Level02/left portal illumination flicker.png" id="6_p0va1"]
 [ext_resource type="Texture2D" uid="uid://dw16vgypq75a5" path="res://assets/Level02/left portal.png" id="7_xm67a"]
 [ext_resource type="Texture2D" uid="uid://clp7akm4nbo31" path="res://assets/Level02/mask pedistal.png" id="8_8217x"]
-[ext_resource type="Script" uid="uid://due5c1b2f8uk2" path="res://white_mask.gd" id="8_ymur7"]
+[ext_resource type="Script" uid="uid://cvjdljqokmyuj" path="res://green_mask_area.gd" id="8_ymur7"]
 [ext_resource type="Texture2D" uid="uid://d1obpdqq5esw1" path="res://assets/Level02/mask.png" id="9_i1aok"]
 [ext_resource type="Texture2D" uid="uid://ox7yu6wsh6e7" path="res://assets/Level02/New Layer 2.png" id="10_srdja"]
 [ext_resource type="Texture2D" uid="uid://iq0a3v75ui3u" path="res://assets/Level02/right portal illumination  Copy.png" id="11_i4ihl"]
 [ext_resource type="Texture2D" uid="uid://r022ptbrhm5l" path="res://assets/Level02/right portal illumination flicker Copy.png" id="12_31vei"]
 [ext_resource type="Texture2D" uid="uid://dfnvj4odbwtku" path="res://assets/Level02/right portal.png" id="13_eceko"]
 [ext_resource type="Texture2D" uid="uid://ba4br8b37h5bn" path="res://assets/Level02/sword in floating stone.png" id="14_3johj"]
+[ext_resource type="Script" uid="uid://bm1rfb4512sfi" path="res://sword_pickup_area.gd" id="14_psnph"]
 [ext_resource type="Texture2D" uid="uid://cmqplwlu8ougg" path="res://assets/Level02/sword key stone.png" id="15_l24s2"]
 [ext_resource type="Texture2D" uid="uid://jwfh7m02xon3" path="res://assets/Level02/sword key.png" id="16_a0jkl"]
 [ext_resource type="Texture2D" uid="uid://dn2n26wje1p78" path="res://assets/Level02/SwordGlowingInStone.png" id="17_3ajej"]
@@ -78,9 +79,11 @@ position = Vector2(998, 326)
 scale = Vector2(4, 4)
 texture = ExtResource("15_l24s2")
 
-[node name="Area2D" type="Area2D" parent="StoneForSword" unique_id=297987448]
-position = Vector2(-963, -102)
+[node name="Area2D" type="Area2D" parent="StoneForSword" unique_id=297987448 node_paths=PackedStringArray("sword_sprite")]
+position = Vector2(-963.25, -102)
 scale = Vector2(4, 4)
+script = ExtResource("14_psnph")
+sword_sprite = NodePath("../../SwordGlowingInStone")
 
 [node name="StoneForSwordCollision" type="CollisionPolygon2D" parent="StoneForSword/Area2D" unique_id=927975491]
 position = Vector2(226.18752, 13.437501)

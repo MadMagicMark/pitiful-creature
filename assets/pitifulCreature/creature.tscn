@@ -124,7 +124,6 @@ scale = Vector2(4, 4)
 script = ExtResource("1_h7l1l")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=811666763]
-visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_qtwcw")
 offset = Vector2(4, -30)
@@ -141,7 +140,6 @@ libraries/ = SubResource("AnimationLibrary_ycv2e")
 autoplay = &"player_idle"
 
 [node name="PlayerSprite2" type="Sprite2D" parent="." unique_id=468632623]
-visible = false
 position = Vector2(0, -23.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_h7l1l")
@@ -152,7 +150,6 @@ libraries/ = SubResource("AnimationLibrary_1sajw")
 autoplay = &"idle"
 
 [node name="PlayerSprite3" type="Sprite2D" parent="." unique_id=1900962532]
-visible = false
 position = Vector2(2.75, -17.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xfp1t")
@@ -163,7 +160,7 @@ libraries/ = SubResource("AnimationLibrary_1sajw")
 autoplay = &"idle"
 
 [node name="PlayerSprite4" type="Sprite2D" parent="." unique_id=406243250]
-position = Vector2(2.75, -17.75)
+position = Vector2(-1.25, -23.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_m4u8d")
 hframes = 8
