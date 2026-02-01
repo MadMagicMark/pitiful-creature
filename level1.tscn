@@ -27,7 +27,7 @@ scroll_scale = Vector2(0, 1)
 scroll_offset = Vector2(1000, 0)
 
 [node name="Sky" type="Sprite2D" parent="Background/Far" unique_id=1047189512]
-position = Vector2(0, 29)
+position = Vector2(-1, 29)
 scale = Vector2(4, 4)
 texture = ExtResource("3_i2041")
 
