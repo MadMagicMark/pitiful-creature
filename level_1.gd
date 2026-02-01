@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	hud.update_mask_ui()
+	GameManager.start_music()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:

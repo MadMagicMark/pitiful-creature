@@ -93,6 +93,22 @@ func reset_game():
 #
 # Sound Effects
 
+@onready var bg_music = preload("res://assets/music/pitiful creature music.wav")
+
+func start_music() -> void:
+	print("Music should start here")
+	var bgplayer = AudioStreamPlayer.new()
+	bgplayer.stream = bg_music
+	
+	bgplayer.volume_linear *= 0.3
+	
+	add_child(bgplayer)
+	bgplayer.play()
+	
+	while 1:
+		await bgplayer.finished
+		bgplayer.play()
+	
 @onready var pickup_sound = preload("res://assets/sounds/cheap-bell-chime.wav")
 
 # Play sound -- call this with the name of the sound to play
