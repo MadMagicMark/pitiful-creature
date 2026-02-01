@@ -1,4 +1,4 @@
 # Pitiful Creature
 
 
-Play at this link: https://johnbradley.github.io/pitiful-creature/
+Play at this link: https://MadMagicMark.github.io/pitiful-creature/
