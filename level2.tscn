@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://4o4ub6ma0h40"]
+[gd_scene format=3 uid="uid://8pmfextds7qr"]
 
 [ext_resource type="Script" uid="uid://byjc2tlor8rnn" path="res://level_1.gd" id="1_jifot"]
 [ext_resource type="PackedScene" uid="uid://by716xgegvvog" path="res://assets/hud/hud.tscn" id="2_3opl0"]
+[ext_resource type="Script" uid="uid://dubr80wvjwgwe" path="res://congrats.gd" id="5_21xmu"]
+[ext_resource type="Texture2D" uid="uid://cb1bh64x73wsj" path="res://assets/win/YouWin2.png" id="6_21xmu"]
 [ext_resource type="PackedScene" uid="uid://cisildkf8vthc" path="res://Level2Landscape.tscn" id="7_3opl0"]
 [ext_resource type="PackedScene" uid="uid://bn4mwq4t7rnim" path="res://assets/pitifulCreature/creature.tscn" id="10_hp87d"]
 
@@ -28,3 +30,20 @@ position = Vector2(-842, -240)
 [node name="Player" parent="." unique_id=737628181 groups=["player"] instance=ExtResource("10_hp87d")]
 z_index = 2
 position = Vector2(1031, 345)
+
+[node name="Congrats" type="Node2D" parent="." unique_id=892170982]
+visible = false
+position = Vector2(162, 15.000002)
+scale = Vector2(8.484375, 8.484375)
+script = ExtResource("5_21xmu")
+
+[node name="ColorRect" type="ColorRect" parent="Congrats" unique_id=476323153]
+offset_left = 6.9539557
+offset_top = 4.1252303
+offset_right = 86.15838
+offset_bottom = 25.69429
+
+[node name="Congratulations" type="Sprite2D" parent="Congrats" unique_id=2056837298]
+position = Vector2(46.732964, 15.823203)
+scale = Vector2(0.66758746, 0.66758746)
+texture = ExtResource("6_21xmu")
