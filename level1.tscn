@@ -27,7 +27,7 @@ scroll_scale = Vector2(0, 1)
 scroll_offset = Vector2(1000, 0)
 
 [node name="Sky" type="Sprite2D" parent="Background/Far" unique_id=1047189512]
-position = Vector2(0, 29)
+position = Vector2(-4, 29)
 scale = Vector2(4, 4)
 texture = ExtResource("3_i2041")
 
@@ -69,7 +69,7 @@ scale = Vector2(4, 4)
 
 [node name="Dunes" type="Sprite2D" parent="Node2D" unique_id=1320982546]
 z_index = 1
-position = Vector2(-1.75, 0)
+position = Vector2(-2.75, 0)
 texture = ExtResource("1_ootpb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1320106763]
@@ -78,6 +78,7 @@ texture = ExtResource("1_ootpb")
 polygon = PackedVector2Array(28.75, 57, 69, 68.5, 82.25, 71.5, 149, 74.75, 173.5, 63.25, 192.25, 61.5, 194, 49.25, 193.75, 14.5, 247.75, 40, 248.5, 107, -252.5, 107.75, -252.75, 19.5, -212.25, 15.25, -212.75, 59.75, -201.75, 71, -181.75, 73, -113, 83, -61, 82.5, 11, 57.5)
 
 [node name="BuildingNode" type="Node2D" parent="." unique_id=1840637102]
+position = Vector2(-1, 0)
 
 [node name="Buildings" parent="BuildingNode" unique_id=1666850886 instance=ExtResource("3_5j5gb")]
 

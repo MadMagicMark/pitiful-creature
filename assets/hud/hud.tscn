@@ -15,7 +15,7 @@
 script = ExtResource("1_ndvix")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1842134197]
-position = Vector2(576.50006, 319.00003)
+position = Vector2(575.50006, 319)
 scale = Vector2(15.986111, 15.238095)
 texture = ExtResource("5_41ool")
 
