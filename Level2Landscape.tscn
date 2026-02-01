@@ -92,25 +92,44 @@ scale = Vector2(4, 4)
 texture = ExtResource("13_eceko")
 
 [node name="SwordInFloatingStone" type="Sprite2D" parent="." unique_id=1125353553]
+visible = false
 position = Vector2(998, 326)
 scale = Vector2(4, 4)
 texture = ExtResource("14_3johj")
 
-[node name="SwordKeyStone" type="Sprite2D" parent="." unique_id=483168202]
+[node name="StoneForSword" type="Sprite2D" parent="." unique_id=483168202]
 position = Vector2(998, 326)
 scale = Vector2(4, 4)
 texture = ExtResource("15_l24s2")
 
-[node name="SwordKey" type="Sprite2D" parent="." unique_id=536783065]
+[node name="Area2D" type="Area2D" parent="StoneForSword" unique_id=297987448]
+position = Vector2(-963, -102)
+scale = Vector2(4, 4)
+
+[node name="StoneForSwordCollision" type="CollisionPolygon2D" parent="StoneForSword/Area2D" unique_id=927975491]
+position = Vector2(226.18752, 13.437501)
+scale = Vector2(0.29262602, 0.25855666)
+polygon = PackedVector2Array(183.0408, 43.752502, 180.90497, 47.861847, 183.2544, 55.35537, 187.31247, 55.113647, 190.08905, 50.03739, 188.38039, 43.994225)
+
+[node name="SwordKeyWhen Completed" type="Sprite2D" parent="." unique_id=536783065]
+visible = false
 position = Vector2(998, 326)
 scale = Vector2(4, 4)
 texture = ExtResource("16_a0jkl")
 
 [node name="SwordGlowingInStone" type="Sprite2D" parent="." unique_id=1233506]
-visible = false
 position = Vector2(998, 326)
 scale = Vector2(4, 4)
 texture = ExtResource("17_3ajej")
+
+[node name="Area2D" type="Area2D" parent="SwordGlowingInStone" unique_id=1332491395]
+position = Vector2(-963, -102)
+scale = Vector2(4, 4)
+
+[node name="SwordInStoneCollision" type="CollisionPolygon2D" parent="SwordGlowingInStone/Area2D" unique_id=181608821]
+position = Vector2(138.1875, 26.3125)
+scale = Vector2(0.29262602, 0.25855666)
+polygon = PackedVector2Array(183.0408, 43.752502, 180.90497, 47.861847, 183.2544, 55.35537, 187.31247, 55.113647, 190.08905, 50.03739, 188.38039, 43.994225)
 
 [node name="Assorted Collisions" type="StaticBody2D" parent="." unique_id=400911563]
 position = Vector2(998, 326)
