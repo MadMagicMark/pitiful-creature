@@ -11,9 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bn4mwq4t7rnim" path="res://assets/pitifulCreature/creature.tscn" id="9_usj0q"]
 [ext_resource type="Script" uid="uid://due5c1b2f8uk2" path="res://white_mask.gd" id="10_5j5gb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
-size = Vector2(2047, 784)
-
 [node name="Level1" type="Node2D" unique_id=2086817603 node_paths=PackedStringArray("hud")]
 texture_filter = 1
 position = Vector2(3, 0)
@@ -38,10 +35,6 @@ scale = Vector2(4, 4)
 texture = ExtResource("4_xy4tn")
 
 [node name="JasonClouds" type="CharacterBody2D" parent="Background" unique_id=1677583923]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/JasonClouds" unique_id=2126938818]
-position = Vector2(1013.5, -3)
-shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="Mid" type="Parallax2D" parent="Background" unique_id=236881805]
 scroll_scale = Vector2(0.5, 1)
