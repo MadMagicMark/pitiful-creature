@@ -31,3 +31,6 @@ func _input(event: InputEvent) -> void:
 
 		if keycode == KEY_P:
 			get_tree().change_scene_to_file(next_scene)
+
+		if keycode == KEY_B:
+			GameManager.play_sound("pickup")

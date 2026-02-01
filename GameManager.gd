@@ -65,6 +65,7 @@ func acquire_mask(mask_id) -> void:
 	masks_collected[mask_id] = true
 	wear_mask(mask_id)
 	inventory_changed.emit(mask_id)
+	play_sound("pickup")
 
 func has_mask(mask_id) -> bool:
 	return masks_collected[mask_id]
@@ -87,3 +88,22 @@ func player_in_area(area_name: String) -> bool:
 
 func reset_game():
 	current_level = 1
+
+
+#
+# Sound Effects
+
+@onready var pickup_sound = preload("res://assets/sounds/cheap-bell-chime.wav")
+
+# Play sound -- call this with the name of the sound to play
+func play_sound(sound_name: String):
+	var player = AudioStreamPlayer.new()
+
+	# Select the sound here	
+	if (sound_name == "pickup"):
+		player.stream = pickup_sound
+
+	add_child(player)
+	player.play()
+	await player.finished
+	player.queue_free()
