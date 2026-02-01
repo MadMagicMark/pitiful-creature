@@ -42,14 +42,14 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = GameManager.playerStats["jump_velocity"]
+		velocity.y = GameManager.playerStats[GameManager.current_mask_name]["jump_velocity"]
 
 	# Check for horizontal motion
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
 	if direction:
 		# Player started moving horizontally
-		velocity.x = direction * GameManager.playerStats["speed"]
+		velocity.x = direction * GameManager.playerStats[GameManager.current_mask_name]["speed"]
 		animationPlayer.play("player_walk")
 		animationPlayer2.play("walk")
 		animationPlayer3.play("walk")
@@ -66,7 +66,7 @@ func _physics_process(delta: float) -> void:
 			sprite3.flip_h = false
 	else:
 		# Player has stopped moving horizontally
-		velocity.x = move_toward(velocity.x, 0, GameManager.playerStats["speed"])
+		velocity.x = move_toward(velocity.x, 0, GameManager.playerStats[GameManager.current_mask_name]["speed"])
 		animationPlayer.play("player_idle")
 		animationPlayer2.play("idle")
 		animationPlayer3.play("idle")

@@ -17,8 +17,26 @@ var current_mask_name: String = NO_MASK
 const MASK_NAMES = [ NO_MASK, MASK_DAPPER, MASK_2, MASK_3, MASK_4 ]
 
 var playerStats = {
-	"jump_velocity": -300.0,
-	"speed": 300.0,
+	NO_MASK: {
+		"jump_velocity": -300.0,
+		"speed": 300.0,
+	},
+	MASK_DAPPER: {
+		"jump_velocity": -400.0,
+		"speed": 500.0,
+	},
+	MASK_2: {
+		"jump_velocity": -300.0,
+		"speed": 300.0,
+	},
+	MASK_3: {
+		"jump_velocity": -300.0,
+		"speed": 300.0,
+	},
+	MASK_4: {
+		"jump_velocity": -300.0,
+		"speed": 300.0,
+	},	
 }
 
 # Game state signals
