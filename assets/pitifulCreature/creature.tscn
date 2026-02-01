@@ -95,6 +95,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtwcw"]
 size = Vector2(13.25, 9.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfp1t"]
+size = Vector2(14.25, 28.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4u8d"]
+size = Vector2(20, 17.5)
+
 [node name="Player" type="CharacterBody2D" unique_id=737628181]
 scale = Vector2(4, 4)
 script = ExtResource("1_h7l1l")
@@ -138,3 +144,11 @@ autoplay = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832895403]
 position = Vector2(-1.375, -14.75)
 shape = SubResource("RectangleShape2D_qtwcw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1577777277]
+position = Vector2(0.375, -22.75)
+shape = SubResource("RectangleShape2D_xfp1t")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=188281309]
+position = Vector2(1.75, -17.25)
+shape = SubResource("RectangleShape2D_m4u8d")

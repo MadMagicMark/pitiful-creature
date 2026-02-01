@@ -1,14 +1,15 @@
 extends CharacterBody2D
 
 var sprite:Sprite2D
-var animationPlayer:AnimationPlayer
+var animationPlayer: AnimationPlayer
 var sprite2:Sprite2D
-var animationPlayer2:AnimationPlayer
+var animationPlayer2: AnimationPlayer
 var sprite3:Sprite2D
-var animationPlayer3:AnimationPlayer
+var animationPlayer3: AnimationPlayer
+var collisionShape: CollisionShape2D
+var collisionShape2: CollisionShape2D
+var collisionShape3: CollisionShape2D
 
-#@export var animationPlayer:AnimationPlayer
-#@export var animationPlayer2:AnimationPlayer
 
 func _ready() -> void:
 	GameManager.inventory_changed.connect(_on_inventory_changed)
@@ -19,21 +20,30 @@ func _ready() -> void:
 	animationPlayer = $PlayerSprite/AnimationPlayer
 	animationPlayer2 = $PlayerSprite2/AnimationPlayer
 	animationPlayer3 = $PlayerSprite3/AnimationPlayer
+	collisionShape = $CollisionShape2D
+	collisionShape2 = $CollisionShape2D2
+	collisionShape3 = $CollisionShape2D3
 
 	animationPlayer.play("player_idle")
 	animationPlayer2.play("idle")
 	animationPlayer3.play("idle")
 
 	show_visible_player_version()
-	
 
 func _on_inventory_changed(mask_id) -> void:
 	show_visible_player_version()
+	update_collision_shape()
 
 func show_visible_player_version():
 	sprite.visible = GameManager.current_mask_name == GameManager.NO_MASK
+	collisionShape.disabled = GameManager.current_mask_name != GameManager.NO_MASK
 	sprite2.visible = GameManager.current_mask_name == GameManager.MASK_DAPPER
+	collisionShape2.disabled = GameManager.current_mask_name != GameManager.MASK_DAPPER
 	sprite3.visible = GameManager.current_mask_name == GameManager.MASK_2
+	collisionShape3.disabled = GameManager.current_mask_name != GameManager.MASK_2
+
+func update_collision_shape():
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
