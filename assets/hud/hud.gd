@@ -10,7 +10,7 @@ func _ready() -> void:
 func _on_inventory_changed(item_name: String) -> void:
 	# If it was a mask, update the mask UI
 	update_mask_ui()
-	
+
 func _on_player_in_group_changed() -> void:
 	if GameManager.player_in_areas:
 		label.text = "Press 'E'"

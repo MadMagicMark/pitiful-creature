@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bx5ix62v3ictn"]
 
 [ext_resource type="Texture2D" uid="uid://c31kerpdym3du" path="res://assets/level01/Portal.png" id="1_edsdr"]
-[ext_resource type="Script" uid="uid://dq3t0kfysjkqu" path="res://portal_area_2d.gd" id="1_hhf17"]
+[ext_resource type="Script" path="res://portal_area_2d.gd" id="1_hhf17"]
 [ext_resource type="Texture2D" uid="uid://boewrmpihqp6c" path="res://assets/level01/PortalGlow1.png" id="2_g1gk6"]
 [ext_resource type="Texture2D" uid="uid://coy7v8k7bj1ip" path="res://assets/level01/PortalGlow2.png" id="3_j34gd"]
 [ext_resource type="Texture2D" uid="uid://b2lu7evjp1pn7" path="res://assets/level01/Ruins_FrontPassthrough.png" id="4_d45go"]
@@ -45,18 +45,18 @@ texture = ExtResource("3_j34gd")
 
 [node name="RuinsFrontPassthrough" type="Sprite2D" parent="." unique_id=1384491919]
 z_index = 1
-position = Vector2(1008, 0)
+position = Vector2(1008, 12)
 scale = Vector2(4, 4)
 texture = ExtResource("4_d45go")
 
 [node name="RuinsBehindDunesPassthrough" type="Sprite2D" parent="." unique_id=1838215145]
-position = Vector2(1000, 0)
+position = Vector2(1000, 12)
 scale = Vector2(4, 4)
 texture = ExtResource("5_hhf17")
 
 [node name="RuinsTopBlocksCharacter" type="Sprite2D" parent="." unique_id=606215832]
 z_index = 1
-position = Vector2(1008, 0)
+position = Vector2(1008, 12)
 scale = Vector2(4, 4)
 texture = ExtResource("5_s1vhq")
 
@@ -76,17 +76,17 @@ scale = Vector2(4, 4)
 texture = ExtResource("8_qoyhb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=5233123]
-position = Vector2(1008, -12)
+position = Vector2(1008, 0)
 scale = Vector2(4, 4)
-polygon = PackedVector2Array(34, -16.900002, 34, -14, 29.299988, -10, 26.600006, -10, 30, 10.300003, 30, 12.199997, 23.799988, 13, 21.100006, 13, 16.100006, 19, 12.799988, 19, 15.700012, 24.800003, 4, 25, 0, 30, -1.199997, 30, -2.300003, 32.199997, 4, 40.600006, 4, 43.199997, 40.200012, 39, 51.799988, 39, 56.799988, 34, 59, 34, 59, 23, 55, 20, 55, 17.199997, 49.700012, 19, 48.799988, 19, 46, -7.199997, 46, -12.400002)
+polygon = PackedVector2Array(34, -16.900002, 34, -14, 29.299988, -10, 26.600006, -10, 30, 10.300003, 30, 12.199997, 23.799988, 13, 21.100006, 13, 16.100006, 19, 12.799988, 19, 17, 26.75, 6.75, 28.5, 0, 30, -1.199997, 30, -2.300003, 32.199997, 4, 40.600006, 4, 43.199997, 40.200012, 39, 51.799988, 39, 56.799988, 34, 59, 34, 59, 23, 55, 20, 55, 17.199997, 49.700012, 19, 48.799988, 19, 46, -7.199997, 46, -12.400002)
 
 [node name="MaskBlueStand" type="Sprite2D" parent="." unique_id=1620768041]
-position = Vector2(1008, -19)
+position = Vector2(1008, 7)
 scale = Vector2(4, 4)
 texture = ExtResource("9_s1vhq")
 
 [node name="MaskBlue" type="Sprite2D" parent="." unique_id=11117702]
-position = Vector2(1008, -19)
+position = Vector2(1008, 7)
 scale = Vector2(4, 4)
 texture = ExtResource("10_hhf17")
 
@@ -96,9 +96,10 @@ scale = Vector2(4, 4)
 texture = ExtResource("11_qbmpf")
 
 [node name="BlueMaskArea2D" type="Area2D" parent="." unique_id=1536978626]
+position = Vector2(0, 12)
 
 [node name="BlueMaskCollision" type="CollisionPolygon2D" parent="BlueMaskArea2D" unique_id=975302351]
-position = Vector2(1008, -19)
+position = Vector2(1008, -5)
 scale = Vector2(4, 4)
 polygon = PackedVector2Array(23, -3, 23, -0.80000305, 20.200012, 2, 17.100006, 2, 21, 12.400002, 21, 14.800003, 24.200012, 18, 31.200012, 18, 35.100006, 11, 37, 11, 37, 3, 32, -1, 32, -3)
 
