@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
 @export var sprite:Sprite2D
 @export var animationPlayer:AnimationPlayer
 
@@ -18,14 +15,14 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = GameManager.playerStats["jump_velocity"]
 
 	# Check for horizontal motion
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
 	if direction:
 		# Player started moving horizontally
-		velocity.x = direction * SPEED
+		velocity.x = direction * GameManager.playerStats["speed"]
 		animationPlayer.play("player_walk")
 		
 		# Figure out which direction the sprite should face
@@ -36,7 +33,7 @@ func _physics_process(delta: float) -> void:
 			sprite.flip_h = false
 	else:
 		# Player has stopped moving horizontally
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, GameManager.playerStats["speed"])
 		animationPlayer.play("player_idle")
 	
 	move_and_slide()

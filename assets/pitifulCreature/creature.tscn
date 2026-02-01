@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn4mwq4t7rnim"]
 
-[ext_resource type="Script" path="res://assets/pitifulCreature/creature.gd" id="1_h7l1l"]
+[ext_resource type="Script" uid="uid://33u84wkmuljv" path="res://assets/pitifulCreature/creature.gd" id="1_h7l1l"]
 [ext_resource type="Texture2D" uid="uid://dgpuc08xkyp01" path="res://assets/pitifulCreature/Stage1_walk.png" id="1_qtwcw"]
 
 [sub_resource type="Animation" id="Animation_beq0j"]

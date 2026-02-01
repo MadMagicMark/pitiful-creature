@@ -16,6 +16,11 @@ var player_in_areas: Array[String] = []
 var current_mask_name: String = NO_MASK
 const MASK_NAMES = [ NO_MASK, MASK_DAPPER, MASK_2, MASK_3, MASK_4 ]
 
+var playerStats = {
+	"jump_velocity": -300.0,
+	"speed": 300.0,
+}
+
 # Game state signals
 signal inventory_changed(item_name)
 signal player_in_group_changed()
@@ -28,6 +33,12 @@ func _ready() -> void:
 
 func wear_mask(mask_id) -> void:
 	current_mask_name = mask_id
+	
+	if mask_id == NO_MASK:
+		playerStats["jump_velocity"] = -300.0
+		
+	elif mask_id == MASK_DAPPER:
+		playerStats["jump_velocity"] = -600.0
 
 func acquire_mask(mask_id) -> void:
 	masks_collected[mask_id] = true
