@@ -54,13 +54,11 @@ func _ready() -> void:
 	masks_collected[MASK_NAMES[0]] = true
 
 func wear_mask(mask_id) -> void:
+	if not masks_collected[mask_id]:
+		# Prevent users from wearing masks they haven't collected
+		return
+
 	current_mask_name = mask_id
-	
-	if mask_id == NO_MASK:
-		playerStats["jump_velocity"] = -300.0
-		
-	elif mask_id == MASK_DAPPER:
-		playerStats["jump_velocity"] = -600.0
 	inventory_changed.emit(mask_id)
 
 func acquire_mask(mask_id) -> void:
