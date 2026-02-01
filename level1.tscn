@@ -55,7 +55,7 @@ texture = ExtResource("1_ootpb")
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1320106763]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D" unique_id=789952604]
-polygon = PackedVector2Array(29.5, 56.5, 85, 69.75, 149, 74.75, 174.75, 65.25, 193.5, 64, 194, 49.25, 193.75, 14.5, 247.75, 40, 248.5, 107, -252.5, 107.75, -252.75, 19.5, -212.25, 15.25, -212.75, 59.75, -201.75, 71, -181.75, 73, -113, 83, -61, 82.5, 11, 57.5)
+polygon = PackedVector2Array(28.75, 57, 69, 68.5, 82.25, 71.5, 149, 74.75, 174.75, 65.25, 193.5, 64, 194, 49.25, 193.75, 14.5, 247.75, 40, 248.5, 107, -252.5, 107.75, -252.75, 19.5, -212.25, 15.25, -212.75, 59.75, -201.75, 71, -181.75, 73, -113, 83, -61, 82.5, 11, 57.5)
 
 [node name="BuildingNode" type="Node2D" parent="." unique_id=1840637102]
 
