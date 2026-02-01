@@ -19,7 +19,7 @@ const MASK_NAMES = [ NO_MASK, MASK_DAPPER, MASK_2, MASK_3, MASK_4 ]
 var playerStats = {
 	NO_MASK: {
 		"jump_velocity": -150.0,
-		"speed": 75.0,
+		"speed": 775.0,
 	},
 	# White Mask
 	MASK_DAPPER: {
@@ -46,12 +46,16 @@ var playerStats = {
 # Game state signals
 signal inventory_changed(item_name)
 signal player_in_group_changed()
+signal win()
 
 func _ready() -> void:
 	# print("Initializing GameManager")
 	for i in range(len(MASK_NAMES)):
 		masks_collected[MASK_NAMES[i]] = false
 	masks_collected[MASK_NAMES[0]] = true
+
+func acquire_sword() -> void:
+	win.emit()
 
 func wear_mask(mask_id) -> void:
 	if not masks_collected[mask_id]:
@@ -89,6 +93,8 @@ func player_in_area(area_name: String) -> bool:
 func reset_game():
 	current_level = 1
 
+func _on_win():
+	$Congrats.visible = true
 
 #
 # Sound Effects
