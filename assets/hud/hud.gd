@@ -1,7 +1,21 @@
 extends CanvasLayer
 
 @export var mask_container: Control;
+@export var label: Label
 
+func _ready() -> void:
+	GameManager.inventory_changed.connect(_on_inventory_changed)
+	GameManager.player_in_group_changed.connect(_on_player_in_group_changed)
+
+func _on_inventory_changed(item_name: String) -> void:
+	# If it was a mask, update the mask UI
+	update_mask_ui()
+	
+func _on_player_in_group_changed() -> void:
+	if GameManager.player_in_areas:
+		label.text = "Press 'E'"
+	else:
+		label.text = ""
 
 func update_mask_ui():
 	show_collected_masks()

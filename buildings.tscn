@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bx5ix62v3ictn"]
 
 [ext_resource type="Texture2D" uid="uid://c31kerpdym3du" path="res://assets/level01/Portal.png" id="1_edsdr"]
+[ext_resource type="Script" uid="uid://dq3t0kfysjkqu" path="res://portal_area_2d.gd" id="1_hhf17"]
 [ext_resource type="Texture2D" uid="uid://boewrmpihqp6c" path="res://assets/level01/PortalGlow1.png" id="2_g1gk6"]
 [ext_resource type="Texture2D" uid="uid://coy7v8k7bj1ip" path="res://assets/level01/PortalGlow2.png" id="3_j34gd"]
 [ext_resource type="Texture2D" uid="uid://b2lu7evjp1pn7" path="res://assets/level01/Ruins_FrontPassthrough.png" id="4_d45go"]
@@ -13,7 +14,19 @@
 [ext_resource type="Texture2D" uid="uid://lshddyb1oy8u" path="res://assets/level01/Mask_Blue.png" id="10_hhf17"]
 [ext_resource type="Texture2D" uid="uid://dt4nyqg5t6h0h" path="res://assets/level01/Mask_WhiteStand.png" id="11_qbmpf"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1vhq"]
+radius = 38.0
+height = 154.0
+
 [node name="Buildings" type="Node2D" unique_id=1666850886]
+
+[node name="PortalArea2D" type="Area2D" parent="." unique_id=1766053332]
+position = Vector2(227, 196)
+script = ExtResource("1_hhf17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalArea2D" unique_id=420768004]
+position = Vector2(-14, 22)
+shape = SubResource("CapsuleShape2D_s1vhq")
 
 [node name="Portal" type="Sprite2D" parent="." unique_id=829045115]
 position = Vector2(1008, -12)
@@ -82,7 +95,12 @@ position = Vector2(1008, -19)
 scale = Vector2(4, 4)
 texture = ExtResource("11_qbmpf")
 
-[node name="BlueMaskCollision" type="CollisionPolygon2D" parent="." unique_id=975302351]
+[node name="BlueMaskArea2D" type="Area2D" parent="." unique_id=1536978626]
+
+[node name="BlueMaskCollision" type="CollisionPolygon2D" parent="BlueMaskArea2D" unique_id=975302351]
 position = Vector2(1008, -19)
 scale = Vector2(4, 4)
 polygon = PackedVector2Array(23, -3, 23, -0.80000305, 20.200012, 2, 17.100006, 2, 21, 12.400002, 21, 14.800003, 24.200012, 18, 31.200012, 18, 35.100006, 11, 37, 11, 37, 3, 32, -1, 32, -3)
+
+[connection signal="body_entered" from="PortalArea2D" to="PortalArea2D" method="_on_body_entered"]
+[connection signal="body_exited" from="PortalArea2D" to="PortalArea2D" method="_on_body_exited"]

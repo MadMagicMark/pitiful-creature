@@ -22,6 +22,7 @@ func _input(event: InputEvent) -> void:
 		if keycode == KEY_L:
 			GameManager.acquire_mask(GameManager.MASK_4)
 			hud.update_mask_ui()
-		if keycode == KEY_M:
-			get_tree().change_scene_to_file("res://assets/doorPuzzle/doorpuzzle.tscn")
+		if keycode == KEY_E:
+			if GameManager.player_in_area("portal"):
+				get_tree().change_scene_to_file("res://assets/doorPuzzle/doorpuzzle.tscn")
 		# The following code is just to try out hud changes     
