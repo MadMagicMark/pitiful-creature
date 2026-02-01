@@ -2,6 +2,7 @@ extends Node2D
 
 @export var button_container: Control
 @export var back_scene: String = "res://level1.tscn"
+@export var next_scene: String = "res://level2.tscn"
 @export var actual_answers: Array[int] = [
 	1, 7, 11, 4, 
 ]
@@ -110,4 +111,4 @@ func _on_back() -> void:
 	get_tree().change_scene_to_file(back_scene)
 
 func _on_solve() -> void:
-	get_tree().change_scene_to_file(back_scene)
+	get_tree().change_scene_to_file(next_scene)
