@@ -100,8 +100,14 @@ func _on_win():
 # Sound Effects
 
 @onready var bg_music = preload("res://assets/music/pitiful creature music.wav")
+@onready var music_started = false
 
 func start_music() -> void:
+	if music_started:
+		return
+
+	music_started = true
+	
 	print("Music should start here")
 	var bgplayer = AudioStreamPlayer.new()
 	bgplayer.stream = bg_music
