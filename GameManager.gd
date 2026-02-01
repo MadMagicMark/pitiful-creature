@@ -21,18 +21,22 @@ var playerStats = {
 		"jump_velocity": -300.0,
 		"speed": 300.0,
 	},
+	# White Mask
 	MASK_DAPPER: {
 		"jump_velocity": -400.0,
 		"speed": 500.0,
 	},
+	# Blue Mask
 	MASK_2: {
 		"jump_velocity": -300.0,
 		"speed": 300.0,
 	},
+	# Green
 	MASK_3: {
 		"jump_velocity": -300.0,
 		"speed": 300.0,
 	},
+	# Yellow
 	MASK_4: {
 		"jump_velocity": -300.0,
 		"speed": 300.0,
