@@ -66,6 +66,11 @@ func reset_button_highlight(idx: int):
 	var btn = get_sprite_for_area2d(idx)
 	btn.texture = plain_textures[idx]
 
+func _reset_screen():
+	for idx in range(len(plain_textures)):
+		var btn = get_sprite_for_area2d(idx)
+		btn.texture = plain_textures[idx]
+
 func _on_button_pressed(idx: int) -> void:
 	if idx == 0:
 		_on_back()
@@ -79,6 +84,12 @@ func _on_button_pressed(idx: int) -> void:
 			tween.tween_interval(highlight_anim_time)
 			tween.connect("finished", _on_solve)
 		else:
+			if not blue_mask_mode:
+				var btn = get_sprite_for_area2d(idx)
+				btn.texture = glow_textures[idx]
+				var tween = get_tree().create_tween()
+				tween.tween_interval(highlight_anim_time)
+				tween.connect("finished", _reset_screen)
 			if correct_so_far():
 				# Highlight most recent correct answer
 				var btn = get_sprite_for_area2d(idx)
